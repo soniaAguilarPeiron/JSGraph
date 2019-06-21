@@ -1,0 +1,28 @@
+{
+  "name": "JSGraph",
+  "version": "1.0.0",
+  "description": "IsThereAnyRoute between two nodes in directed graph",
+  "main": "main.js",
+  "scripts": {
+    "start": "budo src/js/main.js:bundle.js --live",
+    "prebuild": "mkdirp build && mkdirp build/custom ",
+    "build": "npm run build:js && npm run build:html",
+    "build:html": "htmlprocessor index.html -o build/index.html",
+    "test": "jest",
+    "build:js": "browserify src/js/main.js | uglifyjs -cm > build/bundle.min.js"
+  },
+  "keywords": [
+    "graph"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "browserify": "^13.0.0",
+    "budo": "^8.0.4",
+    "mkdirp": "^0.5.1",
+    "uglify-js": "^2.6.2",
+    "htmlprocessor": "^0.2.3",
+    "jest": "^24.8.0"
+  },
+  "author": "Sonia Aguilar Peiron",
+  "license": "ISC"
+}
