@@ -14,7 +14,6 @@
   "keywords": [
     "graph"
   ],
-  "dependencies": {},
   "devDependencies": {
     "browserify": "^13.0.0",
     "budo": "^8.0.4",
