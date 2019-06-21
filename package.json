@@ -16,11 +16,11 @@
   ],
   "devDependencies": {
     "browserify": "^13.0.0",
-    "budo": "^8.0.4",
-    "mkdirp": "^0.5.1",
-    "uglify-js": "^2.6.2",
+    "budo": "^11.6.2",
     "htmlprocessor": "^0.2.3",
-    "jest": "^24.8.0"
+    "jest": "^24.8.0",
+    "mkdirp": "^0.5.1",
+    "uglify-js": "^2.6.2"
   },
   "author": "Sonia Aguilar Peiron",
   "license": "ISC"
