@@ -4,7 +4,7 @@
  * 
  */
 function Graph (){
-	this.nodes = {}
+	this.nodes = {};
 }
 
 /**
@@ -23,7 +23,7 @@ Graph.prototype.addNode = function(node) {
 Graph.prototype.addDirectedEdge = function(nodeA,nodeB) {
 	this.nodes[nodeA.value].edges.push(nodeB.value);
 
-}
+};
 
 // Algorithm used to traverse the 'a' children graph :breadth-first search.
 // Complexity O(V + E)
@@ -35,11 +35,13 @@ Graph.prototype.addDirectedEdge = function(nodeA,nodeB) {
  */
 
  Graph.prototype.getRoute = function(a,b) {
+
+    if (!a || !b || !this.nodes[a.value] || !this.nodes[b.value]) return false;
     var nodesVisited = new Set();
     var nodesToVisitQueue = [a.value]; 
+   
     while (nodesToVisitQueue.length > 0) {
         var nodeVisited = this.nodes[nodesToVisitQueue.shift()];
-        console.log(nodeVisited);
         if (nodeVisited.value === b.value) return true;
         nodesVisited.add(nodeVisited.value);
         nodeVisited.edges && nodeVisited.edges.forEach(
@@ -49,6 +51,6 @@ Graph.prototype.addDirectedEdge = function(nodeA,nodeB) {
                 );
     }
     return false;
-}   
+};
 
 module.exports = Graph;

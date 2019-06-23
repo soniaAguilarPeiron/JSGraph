@@ -1,0 +1,30 @@
+body{
+    background-color: rgb(183, 234, 228);
+}
+#main-container{
+    width: 840px;
+    margin: 0 auto;
+}
+
+/******** INPUT FROM - TO CONTAINER ********/
+#fromto-container{
+    color: black;
+    font-size: 18px;
+    font-family: "HelveticaNeue", sans-serif;
+    line-height: 22px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+#finalResult{ 
+   color: black;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: 18px;
+    font-family: "HelveticaNeue", sans-serif;
+    line-height: 22px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}

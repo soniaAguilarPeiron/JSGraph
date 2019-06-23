@@ -4,24 +4,62 @@
   "description": "IsThereAnyRoute between two nodes in directed graph",
   "main": "main.js",
   "scripts": {
-    "start": "budo src/js/main.js:bundle.js --live",
-    "prebuild": "mkdirp build && mkdirp build/custom ",
-    "build": "npm run build:js && npm run build:html",
-    "build:html": "htmlprocessor index.html -o build/index.html",
     "test": "jest",
-    "build:js": "browserify src/js/main.js | uglifyjs -cm > build/bundle.min.js"
+    "build": "webpack",
+    "watch": "webpack-dev-server --watch --open",
+    "start": "webpack-dev-server --open",
+    "lint": "eslint",
+    "lint:fix": "eslint --fix",
+    "precommit": "eslint"
   },
-  "keywords": [
-    "graph"
-  ],
-  "devDependencies": {
-    "browserify": "^13.0.0",
-    "budo": "^11.6.2",
-    "htmlprocessor": "^0.2.3",
-    "jest": "^24.8.0",
-    "mkdirp": "^0.5.1",
-    "uglify-js": "^2.6.2"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/soniaAguilarPeiron/JSGraph.git"
   },
   "author": "Sonia Aguilar Peiron",
-  "license": "ISC"
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/soniaAguilarPeiron/JSGraph/issues"
+  },
+  "homepage": "https://github.com/soniaAguilarPeiron/JSGraph#readme",
+  "devDependencies": {
+    "@babel/core": "^7.0.0-beta.42",
+    "@babel/plugin-proposal-class-properties": "^7.0.0-beta.42",
+    "@babel/preset-env": "^7.0.0-beta.42",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "^22.4.3",
+    "babel-loader": "^8.0.0-beta.2",
+    "babel-preset-env": "^2.0.0-alpha.20",
+    "copy-webpack-plugin": "^4.5.1",
+    "eslint": "^4.19.1",
+    "eslint-loader": "^2.0.0",
+    "html-webpack-include-assets-plugin": "^1.0.4",
+    "html-webpack-plugin": "^3.0.6",
+    "jest": "^24.8.0",
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.1",
+    "webpack-dev-server": "^3.1.1"
+  },
+  "dependencies": {},
+  "collectCoverage": true,
+  "collectCoverageFrom": [
+    "**/js/**/*.{js}",
+    "!**/node_modules/**",
+    "!**/dist/**"
+  ],
+  "coverageDirectory": "/coverage",
+  "jest": {
+    "roots": [
+      "src/tests/"
+    ],
+    "testURL": "http://localhost/",
+    "transform": {
+      ".*": "./node_modules/babel-jest"
+    },
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "es6"
+    ]
+  }
 }

@@ -2,8 +2,8 @@ var Node = require('../js/Node');
 var Graph = require('../js/Graph');
 
 describe('Graph', () => {
-    let graph;
-    let nodes = [];
+    var graph;
+    var nodes = [];
     beforeEach(() => {
         graph = new Graph();
         nodes.push(new Node('A'));//0

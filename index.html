@@ -5,23 +5,29 @@
     <title>JSGraph</title>
 </head>
 <body>
-    <div>
-        <h4> Is there a route from node a to node b in a Directed graph </h1>
-    </div>
-    <!-- To do: view for add, remove Nodes and edges 
-    <div>
-        <input type="button" onclick="handleClick()" value="Is there a route?">       
-       
-    </div> --> 
+    <div id="main-container">
+        <h5> Is there a route from one node to another in a Directed graph ? </h5>
+    	<div id="fromto-container" class="fromto">
+    		<label for="nodeFrom">Node From:</label>
+    		<input id="nodeFrom" type=text value="A" required size="1"  maxlength="1" onkeydown="GraphView.checkText(event)">
+    	    <label for="nodeTo">Node To:</label>
+	 		  <input id="nodeTo" type=text value="B"required size="1"  maxlength="1"  onkeydown="GraphView.checkText(event)">
+       	<input type="button" onclick="GraphView.handleClick.bind(this)()" value="Is there a route?">       
+      </div> 
+      <div id="finalResult" class="results">
+			   Results
+      </div>
+       <div id="showContainer">
+       	   <table id="graphTable">
+
+       	   </table>
+       </div>
+       <div id="update-graph-container">
+
+       </div>  	
+	</div>
 </body>
-<script src="bundle.js"></script>
-<!--
 <script>
-    function handleClick (){
-    	console.log('entro');
-        var isRouted = graph.getRoute(graph.nodes['I'],graph.nodes['D']);
-        var message = (isRouted) ? "Yes, there is a route" : "No, there isn't a route"
-        alert(message);
-    }
-</script> -->
+	GraphView.updateTable(); 
+</script>
 </html>

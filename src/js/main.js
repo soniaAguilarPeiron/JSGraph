@@ -1,10 +1,9 @@
-var Node = require('../js/Node');
-var Graph = require('../js/Graph');
-
-window.graph;
+var Node = require('./Node');
+var Graph = require('./Graph');
+window.GraphView = require('./GraphView');
 
 function generateGraph() {
-    graph = new Graph();
+    window.graph = new Graph();
     var nodes = [];
     nodes.push(new Node('A'));//0
     nodes.push(new Node('B'));//1
@@ -18,7 +17,7 @@ function generateGraph() {
     nodes.push(new Node('J'));//9
 
     nodes.forEach(function(node){
-        graph.addNode(node)});
+        graph.addNode(node);});
 
     graph.addDirectedEdge(nodes[0],nodes[1]);
     graph.addDirectedEdge(nodes[1],nodes[2]);
