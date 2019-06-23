@@ -7,7 +7,12 @@ npm i
 ```
 ## Commands
 
-#### Run application
+#### Test getRoute with jest
+```
+npm run test
+```
+
+#### Run web application to test getRoute in Browser.
 ```
 npm start
 ```
@@ -15,7 +20,4 @@ npm start
 ```
 npm run build
 ```
-#### Test
-```
-npm run test
-```
+
