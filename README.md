@@ -1,5 +1,5 @@
 # JSGraph
-IsThereARoute between two nodes implementation in a directed graph.
+IsThereARoute between two nodes Javascript implementation in a directed graph.
 
 #### Install project
 ```
@@ -16,7 +16,7 @@ npm run test
 ```
 npm start
 ```
-#### Generate dist folder
+#### Generate build folder
 ```
 npm run build
 ```
