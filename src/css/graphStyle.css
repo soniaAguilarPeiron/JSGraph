@@ -7,7 +7,7 @@ body{
 }
 
 /******** INPUT FROM - TO CONTAINER ********/
-#fromto-container{
+#main-container{
     color: black;
     font-size: 18px;
     font-family: "HelveticaNeue", sans-serif;
@@ -27,4 +27,10 @@ body{
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap
+}
+#finalResult.found{ 
+   color: rgb(47,152,96);
+}
+#finalResult.notFound{ 
+    color: rgb(236,98,98);
 }
