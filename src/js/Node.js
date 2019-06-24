@@ -4,7 +4,6 @@
  * @params Node value {string}
  */
 function Node(value, edges){ 
-	console.log('abans',value ,edges);
     this.value = value,
     this.edges = edges.slice();
 };
