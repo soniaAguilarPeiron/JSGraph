@@ -12,7 +12,7 @@ function Graph (){
  * @param node {Node}
  */
 Graph.prototype.addNode = function(node) {
-	this.nodes[node.value] = {value: node.value, edges:[]};
+	this.nodes[node.value] = node;
 };
 
 /**

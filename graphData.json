@@ -1,0 +1,12 @@
+[
+  {"node": "A", "edges": ["B","D","I"]},
+  {"node": "B", "edges":["C"]},
+  {"node": "C", "edges":[]},
+  {"node": "D", "edges":["E"]},
+  {"node": "E", "edges":["F"]},
+  {"node": "F", "edges":["G"]},
+  {"node": "G", "edges":["H"]},
+  {"node": "H", "edges":[]},
+  {"node": "I", "edges":["J"]},
+  {"node": "J", "edges":["E"]}
+]

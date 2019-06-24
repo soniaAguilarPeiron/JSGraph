@@ -1,10 +1,12 @@
 //a constructor for adding a node to the graph
 /**
  * Node constructor
+ * @params Node value {string}
  */
-function Node(value){  
+function Node(value, edges){ 
+	console.log('abans',value ,edges);
     this.value = value,
-    this.edges = [];
+    this.edges = edges.slice();
 };
 
 /**

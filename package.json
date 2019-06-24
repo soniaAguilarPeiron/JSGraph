@@ -41,25 +41,11 @@
     "webpack-dev-server": "^3.1.1"
   },
   "dependencies": {},
-  "collectCoverage": true,
-  "collectCoverageFrom": [
-    "**/js/**/*.{js}",
-    "!**/node_modules/**",
-    "!**/dist/**"
-  ],
-  "coverageDirectory": "/coverage",
   "jest": {
     "roots": [
       "src/tests/"
     ],
-    "testURL": "http://localhost/",
-    "transform": {
-      ".*": "./node_modules/babel-jest"
-    },
-    "moduleFileExtensions": [
-      "js",
-      "json",
-      "es6"
-    ]
+    "verbose": true,
+    "testURL": "http://localhost/"
   }
 }
