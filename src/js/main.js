@@ -1,6 +1,6 @@
-var Node = require('Node');
-var Graph = require('Graph');
-window.GraphView = require('GraphView');
+var Node = require('./Node');
+var Graph = require('./Graph');
+window.GraphView = require('./graphView');
 
 function generateGraph() {
     window.graph = new Graph();
